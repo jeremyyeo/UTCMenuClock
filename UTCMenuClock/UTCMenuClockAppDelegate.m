@@ -88,7 +88,9 @@ NSMenuItem *show24HrTimeItem;
     NSDateFormatter* UTCdateShortDF = [[[NSDateFormatter alloc] init] autorelease];
     NSDateFormatter* UTCdaynum = [[[NSDateFormatter alloc] init] autorelease];
     
-    NSTimeZone* UTCtz = [NSTimeZone timeZoneWithAbbreviation:@"UTC"];
+    NSTimeZone* UTCtz = [NSTimeZone timeZoneWithName:@"Asia/Singapore"];
+    // Evelyn: Asia/Singapore
+    // Jeremy: Pacific/Auckland
 
     [UTCdf setTimeZone: UTCtz];
     [UTCdateDF setTimeZone: UTCtz];
@@ -98,7 +100,7 @@ NSMenuItem *show24HrTimeItem;
     BOOL showDate = [self fetchBooleanPreference:@"ShowDate"];
     BOOL showSeconds = [self fetchBooleanPreference:@"ShowSeconds"];
     BOOL showJulian = [self fetchBooleanPreference:@"ShowJulianDate"];
-    BOOL showTimeZone = [self fetchBooleanPreference:@"ShowTimeZone"];
+    BOOL showTimeZone = [self fetchBooleanPreference:@"ChangeStatus"];
     BOOL show24HrTime = [self fetchBooleanPreference:@"24HRTime"];
     
     if (showSeconds) {
@@ -132,9 +134,9 @@ NSMenuItem *show24HrTimeItem;
     }
     
     if (showTimeZone) { 
-        UTCTzString = @" UTC";
+        UTCTzString = @"❤️evelyn";
     } else { 
-        UTCTzString = @"";
+        UTCTzString = @"😤evelyn";
     }
 
     if (showDate) {
@@ -172,7 +174,7 @@ NSMenuItem *show24HrTimeItem;
         [[NSUserDefaults standardUserDefaults] synchronize];
         [[NSUserDefaults standardUserDefaults] setObject:[NSDate date] forKey:dateKey];
 
-        [standardUserDefaults setBool:TRUE forKey:@"ShowTimeZone"];
+        [standardUserDefaults setBool:TRUE forKey:@"ChangeStatus"];
         [standardUserDefaults setBool:TRUE forKey:@"Show24HrTime"];
         [showTimeZoneItem setState:NSOnState];
         [show24HrTimeItem setState:NSOnState];
@@ -206,7 +208,7 @@ NSMenuItem *show24HrTimeItem;
     dateMenuItem = mainItem;
 
     NSMenuItem *cp1Item = [[[NSMenuItem alloc] init] autorelease];
-    NSMenuItem *cp2Item = [[[NSMenuItem alloc] init] autorelease];
+//    NSMenuItem *cp2Item = [[[NSMenuItem alloc] init] autorelease];
     NSMenuItem *cp3Item = [[[NSMenuItem alloc] init] autorelease];
     NSMenuItem *quitItem = [[[NSMenuItem alloc] init] autorelease];
     NSMenuItem *launchItem = [[[NSMenuItem alloc] init] autorelease];
@@ -217,16 +219,16 @@ NSMenuItem *show24HrTimeItem;
  //   NSMenuItem *changeFontItem = [[[NSMenuItem alloc] init] autorelease];
     
     showTimeZoneItem = [[[NSMenuItem alloc] init] autorelease];
-    NSMenuItem *sep1Item = [NSMenuItem separatorItem];
+//    NSMenuItem *sep1Item = [NSMenuItem separatorItem];
     NSMenuItem *sep2Item = [NSMenuItem separatorItem];
     NSMenuItem *sep3Item = [NSMenuItem separatorItem];
     NSMenuItem *sep4Item = [NSMenuItem separatorItem];
     
     [mainItem setTitle:@""];
 
-    [cp1Item setTitle:@"UTC Menu Clock v1.2.3"];
-    [cp2Item setTitle:@"jna@retina.net"];
-    [cp3Item setTitle:@"http://github.com/netik/UTCMenuClock"];
+    [cp1Item setTitle:@"Evelyn-Jeremy-Time-Converter-v1"];
+//    [cp2Item setTitle:@"jna@retina.net"];
+//    [cp3Item setTitle:@"http://github.com/netik/UTCMenuClock"];
 
     [cp3Item setEnabled:TRUE];
     [cp3Item setAction:@selector(openGithubURL:)];
@@ -251,7 +253,7 @@ NSMenuItem *show24HrTimeItem;
     [showJulianItem setEnabled:TRUE];
     [showJulianItem setAction:@selector(togglePreference:)];
 
-    [showTimeZoneItem setTitle:@"Show Time Zone"];
+    [showTimeZoneItem setTitle:@"Change Status"];
     [showTimeZoneItem setEnabled:TRUE];
     [showTimeZoneItem setAction:@selector(togglePreference:)];
     
@@ -267,10 +269,10 @@ NSMenuItem *show24HrTimeItem;
     [mainMenu addItem:sep2Item];
     // "---"
     [mainMenu addItem:cp1Item];
-    [mainMenu addItem:cp2Item];
+//    [mainMenu addItem:cp2Item];
     // "---"
-    [mainMenu addItem:sep1Item];
-    [mainMenu addItem:cp3Item];
+ //   [mainMenu addItem:sep1Item];
+ //   [mainMenu addItem:cp3Item];
     // "---"
     [mainMenu addItem:sep3Item];
 
@@ -278,7 +280,7 @@ NSMenuItem *show24HrTimeItem;
     BOOL showDate = [self fetchBooleanPreference:@"ShowDate"];
     BOOL showSeconds = [self fetchBooleanPreference:@"ShowSeconds"];
     BOOL showJulian = [self fetchBooleanPreference:@"ShowJulianDate"];
-    BOOL showTimeZone = [self fetchBooleanPreference:@"ShowTimeZone"];
+    BOOL showTimeZone = [self fetchBooleanPreference:@"ChangeStatus"];
     BOOL show24HrTime = [self fetchBooleanPreference:@"24HRTime"];
     
     // TODO: DRY this up a bit.
@@ -328,7 +330,7 @@ NSMenuItem *show24HrTimeItem;
     [mainMenu addItem:show24Item];
     [mainMenu addItem:showDateItem];
     [mainMenu addItem:showSecondsItem];
-    [mainMenu addItem:showJulianItem];
+  //  [mainMenu addItem:showJulianItem];
     [mainMenu addItem:showTimeZoneItem];
   //  [mainMenu addItem:changeFontItem];
     // "---"

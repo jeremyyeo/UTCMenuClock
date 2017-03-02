@@ -3,61 +3,61 @@
     {
       "size" : "16x16",
       "idiom" : "mac",
-      "filename" : "clock-icon-17.png",
+      "filename" : "watermelon-16.png",
       "scale" : "1x"
     },
     {
       "size" : "16x16",
       "idiom" : "mac",
-      "filename" : "clock-icon-33.png",
+      "filename" : "watermelon-33.png",
       "scale" : "2x"
     },
     {
       "size" : "32x32",
       "idiom" : "mac",
-      "filename" : "clock-icon-32.png",
+      "filename" : "watermelon-32.png",
       "scale" : "1x"
     },
     {
       "size" : "32x32",
       "idiom" : "mac",
-      "filename" : "clock-icon-64.png",
+      "filename" : "watermelon-64.png",
       "scale" : "2x"
     },
     {
       "size" : "128x128",
       "idiom" : "mac",
-      "filename" : "clock-icon-128.png",
+      "filename" : "watermelon-128.png",
       "scale" : "1x"
     },
     {
       "size" : "128x128",
       "idiom" : "mac",
-      "filename" : "clock-icon-257.png",
+      "filename" : "watermelon-257.png",
       "scale" : "2x"
     },
     {
       "size" : "256x256",
       "idiom" : "mac",
-      "filename" : "clock-icon-256.png",
+      "filename" : "watermelon-256.png",
       "scale" : "1x"
     },
     {
       "size" : "256x256",
       "idiom" : "mac",
-      "filename" : "clock-icon-513.png",
+      "filename" : "watermelon-513.png",
       "scale" : "2x"
     },
     {
       "size" : "512x512",
       "idiom" : "mac",
-      "filename" : "clock-icon-512.png",
+      "filename" : "watermelon-512.png",
       "scale" : "1x"
     },
     {
       "size" : "512x512",
       "idiom" : "mac",
-      "filename" : "clock-icon-1024.png",
+      "filename" : "watermelon-1024.png",
       "scale" : "2x"
     }
   ],
